@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap");
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    min-width: 375px;
+    max-width: 1440px;
+    background-color: var(--VeryLightGray);
+}
+
+header {
+    width: 375px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header__subtitle {
+    color: var(--VeryDarkBlue);
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.header__title {
+    color: var(--VeryDarkBlue);
+    font-size: 27px;
+    font-weight: 300;
+    margin-top: 50px;
+}
+
+p {
+    color: var(--GrayishBlue);
+    font-size: 11px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 375px) {
+    .header__subtitle {
+        font-size: 25px;
+    }
+
+    .header__title {
+        font-size: 25px;
+    }
+
+    header p {
+        width: 280px;
+        font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__card {
+    width: 325px;
+    height: 230px;
+    padding: 20px 15px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 13px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px 0.5px #ddd;
+}
+
+.container__card h3 {
+    color: var(--VeryDarkBlue);
+    margin: 10px 10px;
+}
+
+.container__card p {
+    width: 220px;
+    margin: 10px 10px;
+}
+
+.container__card img {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.super {
+    align-self: center;
+}
+
+.calculator {
+    align-self: center;
+}
+
+.team::after {
+    border: 2px var(--Red) solid;
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.super::after {
+    border: 2px var(--Cyan) solid;
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.karma::after {
+    border: 2px var(--Orange) solid;
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.calculator::after {
+    border: 2px var(--Blue) solid;
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
